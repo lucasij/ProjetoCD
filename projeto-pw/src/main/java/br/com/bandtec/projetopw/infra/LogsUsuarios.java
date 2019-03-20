@@ -14,19 +14,14 @@ public class LogsUsuarios {
 	int cont = 0;
 
 	public void acresentarMatriz(String login) {
-		for (int cont = 0; cont < matrizAcessos.length; cont++) {
-			calendario = Calendar.getInstance();
-			String dataHora = s.format(calendario.getTime());
-			matrizAcessos[cont][0] = login;
-			matrizAcessos[cont][1] = dataHora;
-		}
-		int contLogin = 0;
-		System.out.println(matrizAcessos[contLogin][0]);
-		System.out.println(matrizAcessos[contLogin][1]);
-		contLogin++;
+		calendario = Calendar.getInstance();
+		String dataHora = s.format(calendario.getTime());
+		matrizAcessos[cont][0] = login;
+		matrizAcessos[cont][1] = dataHora;
+		cont++;
 
-		if (contLogin > 10) {
-			contLogin = 0;
+		if (cont > 10) {
+			cont = 0;
 			// gerar log vem aqui
 		}
 
